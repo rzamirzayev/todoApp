@@ -1,0 +1,8 @@
+# flyctl launch added from .gitignore
+**\target
+**\*.class
+**\*.jar
+**\.idea
+**\*.iml
+**\.DS_Store
+fly.toml
