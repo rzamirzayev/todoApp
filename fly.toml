@@ -1,22 +1,17 @@
-# fly.toml app configuration file generated for todo-app-rza on 2026-04-29T14:04:04+04:00
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'todo-app-rza'
-primary_region = 'fra'
+app = "todo-app-rza"
+primary_region = "fra"
 
 [build]
-  dockerfile = 'Dockerfile'
+  dockerfile = "Dockerfile"
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = false
   auto_start_machines = true
-  min_machines_running = 0
+  min_machines_running = 1
 
 [[vm]]
-  memory = '512mb'
+  memory = "512mb"
+  cpu_kind = "shared"
   cpus = 1
-  memory_mb = 512
